@@ -1,2 +1,2 @@
 # Code--explainer-ai
-project done by our team IBM Bob Hackatho
+project done by our team IBM Bob Hackathon
