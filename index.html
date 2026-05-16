@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Code Explainer AI</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -13,44 +14,59 @@
 
         <h1>Code Explainer AI</h1>
 
-        <!-- Code Input -->
-        <textarea
-            id="codeInput"
-            placeholder="Paste your code here..."
-        ></textarea>
+        <!-- Input Section -->
+        <div class="input-section">
 
-        <!-- Analyze Button -->
-        <button id="analyzeBtn">
-            Analyze Code
-        </button>
+            <textarea
+                id="codeInput"
+                placeholder="Paste your code here..."
+            ></textarea>
 
-        <!-- Loading Spinner -->
-        <div id="loading" class="hidden">
-            Analyzing your code...
+            <button id="analyzeBtn">
+                Analyze Code
+            </button>
+
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading hidden">
+
+            <div class="spinner"></div>
+
+            <p>Analyzing your code...</p>
+
+        </div>
+
+        <!-- Error Box -->
+        <div id="errorBox" class="error-box hidden">
+            Please paste some code before analyzing.
         </div>
 
         <!-- Output Panels -->
-        <div class="output-container">
+        <div class="panels">
 
-            <!-- Explanation Panel -->
+            <!-- Explanation -->
             <div class="panel">
                 <h2>Explanation</h2>
+
                 <div id="explanationOutput">
-                    Your explanation will appear here.
+                    AI explanation will appear here.
                 </div>
             </div>
 
-            <!-- Issues Panel -->
+            <!-- Issues -->
             <div class="panel">
                 <h2>Issues Found</h2>
+
                 <ul id="issuesOutput">
-                    <li>No issues yet.</li>
+                    <li>No issues detected yet.</li>
                 </ul>
             </div>
 
-            <!-- Suggestion Panel -->
+            <!-- Suggestions -->
             <div class="panel">
                 <h2>Suggested Fix</h2>
+
                 <pre id="suggestionOutput">
 Your improved code will appear here.
                 </pre>
