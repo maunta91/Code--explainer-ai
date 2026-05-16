@@ -25,7 +25,7 @@ async function analyzeCode(code) {
 }
 
 async function askQuestion(question, context) {
-  const response = await fetch("https://code-explainer-ai-pnlt.onrender.com//ask-question", {
+  const response = await fetch("https://code-explainer-ai-pnlt.onrender.com/ask-question", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question: question, context: context })
