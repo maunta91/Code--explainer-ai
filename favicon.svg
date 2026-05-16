@@ -1,0 +1,41 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background for better visibility -->
+  <rect width="32" height="32" fill="#1e293b" rx="4"/>
+  
+  <!-- Network Icon - Simplified and larger -->
+  <g transform="translate(16, 16)">
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="3" fill="#38bdf8"/>
+    
+    <!-- Top node -->
+    <circle cx="0" cy="-8" r="2.5" fill="#38bdf8"/>
+    <line x1="0" y1="-3" x2="0" y2="-5.5" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <!-- Bottom node -->
+    <circle cx="0" cy="8" r="2.5" fill="#38bdf8"/>
+    <line x1="0" y1="3" x2="0" y2="5.5" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <!-- Left node -->
+    <circle cx="-8" cy="0" r="2.5" fill="#38bdf8"/>
+    <line x1="-3" y1="0" x2="-5.5" y2="0" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <!-- Right node -->
+    <circle cx="8" cy="0" r="2.5" fill="#38bdf8"/>
+    <line x1="3" y1="0" x2="5.5" y2="0" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <!-- Diagonal nodes -->
+    <circle cx="-6" cy="-6" r="2.5" fill="#38bdf8"/>
+    <line x1="-2" y1="-2" x2="-4" y2="-4" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <circle cx="6" cy="-6" r="2.5" fill="#38bdf8"/>
+    <line x1="2" y1="-2" x2="4" y2="-4" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <circle cx="-6" cy="6" r="2.5" fill="#38bdf8"/>
+    <line x1="-2" y1="2" x2="-4" y2="4" stroke="#38bdf8" stroke-width="1.5"/>
+    
+    <circle cx="6" cy="6" r="2.5" fill="#38bdf8"/>
+    <line x1="2" y1="2" x2="4" y2="4" stroke="#38bdf8" stroke-width="1.5"/>
+  </g>
+</svg>
+
+<!-- Made with Bob -->
