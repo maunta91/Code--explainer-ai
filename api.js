@@ -15,7 +15,7 @@ const askQuestionSection = document.getElementById("askQuestionSection");
 const answerOutput = document.getElementById("answerOutput");
 
 async function analyzeCode(code) {
-  const response = await fetch("http://localhost:8000/analyze", {
+  const response = await fetch("https://code-explainer-ai-pnlt.onrender.com/analyze",  {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ code: code })
@@ -25,7 +25,7 @@ async function analyzeCode(code) {
 }
 
 async function askQuestion(question, context) {
-  const response = await fetch("http://localhost:8000/ask-question", {
+  const response = await fetch("https://code-explainer-ai-pnlt.onrender.com//ask-question", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ question: question, context: context })
