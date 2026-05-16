@@ -94,7 +94,6 @@ Double click `index.html` or open it in your browser.
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | `/analyze` | Analyze code — returns explanation, issues, suggestion |
-| GET | `/health` | Health check |
 
 ### Example request
 
