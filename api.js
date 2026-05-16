@@ -1,54 +1,36 @@
-const GROQ_API_KEY = "YOUR_GROQ_KEY_HERE";
-async function analyzeCode(userCode) {
+const analyzeBtn = document.getElementById("analyzeBtn");
 
-  // Validation
-  if (!userCode || userCode.trim() === "") {
-    return { error: true, message: "Please paste some code first." };
-  }
+const loading = document.getElementById("loading");
 
-  if (userCode.length > 8000) {
-    return { error: true, message: "Code too long. Keep under 8000 characters." };
-  }
+const explanationOutput = document.getElementById("explanationOutput");
 
-  const prompt = `
-Analyze the following code and respond ONLY in this exact JSON format:
-{
-  "explanation": "What this code does in 3-5 plain English sentences.",
-  "issues": ["issue 1", "issue 2", "issue 3"],
-  "suggestion": "Improved version with one sentence explaining what changed."
-}
-No markdown. No backticks. Valid JSON only.
-If no issues found write: ["No major issues found"]
+const issuesOutput = document.getElementById("issuesOutput");
 
-Code:
-${userCode}
-`;
+const suggestionOutput = document.getElementById("suggestionOutput");
 
-  try {
-    const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + GROQ_API_KEY
-      },
-      body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
-        messages: [{ role: "user", content: prompt }],
-        temperature: 0.3
-      })
-    });
+analyzeBtn.addEventListener("click", () => {
 
-    const data = await response.json();
+    loading.classList.remove("hidden");
 
-    if (data.error) {
-      return { error: true, message: data.error.message };
-    }
+    setTimeout(() => {
 
-    const raw = data.choices[0].message.content.trim();
-    const cleaned = raw.replace(/```json|```/g, "").trim();
-    return JSON.parse(cleaned);
+        loading.classList.add("hidden");
 
-  } catch (err) {
-    return { error: true, message: "Something went wrong. Try again." };
-  }
-}
+        explanationOutput.innerText =
+            "This code takes user input and processes it.";
+
+        issuesOutput.innerHTML = `
+            <li>Variable naming can be improved</li>
+            <li>No error handling found</li>
+        `;
+
+        suggestionOutput.innerText =
+`try {
+    // improved code here
+} catch(error) {
+    console.log(error);
+}`;
+
+    }, 2000);
+
+});
