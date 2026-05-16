@@ -15,6 +15,7 @@
 
         <div class="header">
             <h1>CodeXplain AI</h1>
+            <p>Powered by AI • Analyze, Debug, and Improve Your Code Instantly</p>
         </div>
 
         <!-- Input Section -->
@@ -25,9 +26,14 @@
                 placeholder="Paste your code here..."
             ></textarea>
 
-            <button id="analyzeBtn">
-                Analyze Code
-            </button>
+            <div class="button-group">
+                <button id="analyzeBtn" class="btn-primary">
+                    <span>🔍</span> Analyze Code
+                </button>
+                <button id="clearBtn" class="btn-secondary">
+                    <span>🗑️</span> Clear
+                </button>
+            </div>
 
         </div>
 
@@ -50,10 +56,31 @@
 
             <!-- Explanation -->
             <div class="panel">
-                <h2>Explanation</h2>
+                <div class="panel-header">
+                    <h2>Explanation</h2>
+                </div>
 
                 <div id="explanationOutput">
                     AI explanation will appear here.
+                </div>
+
+                <!-- Ask Question Section -->
+                <div id="askQuestionSection" class="ask-question-section hidden">
+                    <div class="question-divider">
+                        <span>Need more clarity?</span>
+                    </div>
+                    <div class="question-input-group">
+                        <input
+                            type="text"
+                            id="questionInput"
+                            placeholder="Ask a follow-up question about the explanation..."
+                            class="question-input"
+                        />
+                        <button id="askQuestionBtn" class="btn-ask">
+                            💬 Ask
+                        </button>
+                    </div>
+                    <div id="answerOutput" class="answer-output hidden"></div>
                 </div>
             </div>
 
@@ -68,13 +95,23 @@
 
             <!-- Suggestions -->
             <div class="panel">
-                <h2>Suggested Fix</h2>
+                <div class="panel-header">
+                    <h2>Suggested Fix</h2>
+                    <button id="copyBtn" class="btn-copy hidden" title="Copy code">
+                        📋 Copy
+                    </button>
+                </div>
 
-                <pre id="suggestionOutput">
-Your improved code will appear here.
-                </pre>
+                <pre id="suggestionOutput">Your improved code will appear here.</pre>
             </div>
 
+        </div>
+
+        <!-- Action Buttons -->
+        <div id="actionButtons" class="action-buttons hidden">
+            <button id="analyzeAnotherBtn" class="btn-action">
+                <span>🔄</span> Analyze Another Code
+            </button>
         </div>
 
     </div>
