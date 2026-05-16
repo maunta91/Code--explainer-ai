@@ -19,13 +19,19 @@ body {
     margin: auto;
 }
 
+/* Header with Logo */
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 /* Title */
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
     color: #38bdf8;
     font-size: 42px;
+    margin: 0;
 }
 
 /* Input Section */
