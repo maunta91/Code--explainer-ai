@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Explainer AI</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Code Explainer AI</h1>
+
+        <!-- Code Input -->
+        <textarea
+            id="codeInput"
+            placeholder="Paste your code here..."
+        ></textarea>
+
+        <!-- Analyze Button -->
+        <button id="analyzeBtn">
+            Analyze Code
+        </button>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="hidden">
+            Analyzing your code...
+        </div>
+
+        <!-- Output Panels -->
+        <div class="output-container">
+
+            <!-- Explanation Panel -->
+            <div class="panel">
+                <h2>Explanation</h2>
+                <div id="explanationOutput">
+                    Your explanation will appear here.
+                </div>
+            </div>
+
+            <!-- Issues Panel -->
+            <div class="panel">
+                <h2>Issues Found</h2>
+                <ul id="issuesOutput">
+                    <li>No issues yet.</li>
+                </ul>
+            </div>
+
+            <!-- Suggestion Panel -->
+            <div class="panel">
+                <h2>Suggested Fix</h2>
+                <pre id="suggestionOutput">
+Your improved code will appear here.
+                </pre>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="api.js"></script>
+
+</body>
+</html>
